@@ -12,10 +12,17 @@
 		3A2BBF5F1BCDDAC200B23285 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2BBF5D1BCDDAC200B23285 /* Main.storyboard */; };
 		3A2BBF611BCDDAC200B23285 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2BBF601BCDDAC200B23285 /* Assets.xcassets */; };
 		3A2BBF641BCDDAC200B23285 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2BBF621BCDDAC200B23285 /* LaunchScreen.storyboard */; };
-		3A2BBF6D1BCDDDA900B23285 /* HangmanWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BBF6C1BCDDDA900B23285 /* HangmanWords.swift */; settings = {ASSET_TAGS = (); }; };
-		3A2BBF6F1BCDDEBB00B23285 /* words.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A2BBF6E1BCDDEBB00B23285 /* words.plist */; settings = {ASSET_TAGS = (); }; };
-		3A2BBF731BCDE37800B23285 /* Hangman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BBF721BCDE37800B23285 /* Hangman.swift */; settings = {ASSET_TAGS = (); }; };
-		8567A7B91BD5D83300A44C2A /* maxresdefault.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8567A7B81BD5D83300A44C2A /* maxresdefault.jpg */; settings = {ASSET_TAGS = (); }; };
+		3A2BBF6D1BCDDDA900B23285 /* HangmanWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BBF6C1BCDDDA900B23285 /* HangmanWords.swift */; };
+		3A2BBF6F1BCDDEBB00B23285 /* words.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A2BBF6E1BCDDEBB00B23285 /* words.plist */; };
+		3A2BBF731BCDE37800B23285 /* Hangman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BBF721BCDE37800B23285 /* Hangman.swift */; };
+		85471F8C1BDF3EF0005AB4C8 /* hangman1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 85471F851BDF3EF0005AB4C8 /* hangman1.gif */; };
+		85471F8D1BDF3EF0005AB4C8 /* hangman2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 85471F861BDF3EF0005AB4C8 /* hangman2.gif */; };
+		85471F8E1BDF3EF0005AB4C8 /* hangman3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 85471F871BDF3EF0005AB4C8 /* hangman3.gif */; };
+		85471F8F1BDF3EF0005AB4C8 /* hangman4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 85471F881BDF3EF0005AB4C8 /* hangman4.gif */; };
+		85471F901BDF3EF0005AB4C8 /* hangman5.gif in Resources */ = {isa = PBXBuildFile; fileRef = 85471F891BDF3EF0005AB4C8 /* hangman5.gif */; };
+		85471F911BDF3EF0005AB4C8 /* hangman6.gif in Resources */ = {isa = PBXBuildFile; fileRef = 85471F8A1BDF3EF0005AB4C8 /* hangman6.gif */; };
+		85471F921BDF3EF0005AB4C8 /* hangman7.gif in Resources */ = {isa = PBXBuildFile; fileRef = 85471F8B1BDF3EF0005AB4C8 /* hangman7.gif */; };
+		8567A7B91BD5D83300A44C2A /* maxresdefault.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8567A7B81BD5D83300A44C2A /* maxresdefault.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +36,13 @@
 		3A2BBF6C1BCDDDA900B23285 /* HangmanWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HangmanWords.swift; sourceTree = "<group>"; };
 		3A2BBF6E1BCDDEBB00B23285 /* words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = words.plist; sourceTree = "<group>"; };
 		3A2BBF721BCDE37800B23285 /* Hangman.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hangman.swift; sourceTree = "<group>"; };
+		85471F851BDF3EF0005AB4C8 /* hangman1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hangman1.gif; sourceTree = "<group>"; };
+		85471F861BDF3EF0005AB4C8 /* hangman2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hangman2.gif; sourceTree = "<group>"; };
+		85471F871BDF3EF0005AB4C8 /* hangman3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hangman3.gif; sourceTree = "<group>"; };
+		85471F881BDF3EF0005AB4C8 /* hangman4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hangman4.gif; sourceTree = "<group>"; };
+		85471F891BDF3EF0005AB4C8 /* hangman5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hangman5.gif; sourceTree = "<group>"; };
+		85471F8A1BDF3EF0005AB4C8 /* hangman6.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hangman6.gif; sourceTree = "<group>"; };
+		85471F8B1BDF3EF0005AB4C8 /* hangman7.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hangman7.gif; sourceTree = "<group>"; };
 		8567A7B81BD5D83300A44C2A /* maxresdefault.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = maxresdefault.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +76,7 @@
 		3A2BBF581BCDDAC200B23285 /* Hangman */ = {
 			isa = PBXGroup;
 			children = (
+				85471F841BDF3EF0005AB4C8 /* basic-hangman-img */,
 				3A2BBF711BCDE36400B23285 /* API */,
 				3A2BBF701BCDE24000B23285 /* Views */,
 				3A2BBF6B1BCDDD7B00B23285 /* Words */,
@@ -98,6 +113,20 @@
 				3A2BBF721BCDE37800B23285 /* Hangman.swift */,
 			);
 			name = API;
+			sourceTree = "<group>";
+		};
+		85471F841BDF3EF0005AB4C8 /* basic-hangman-img */ = {
+			isa = PBXGroup;
+			children = (
+				85471F851BDF3EF0005AB4C8 /* hangman1.gif */,
+				85471F861BDF3EF0005AB4C8 /* hangman2.gif */,
+				85471F871BDF3EF0005AB4C8 /* hangman3.gif */,
+				85471F881BDF3EF0005AB4C8 /* hangman4.gif */,
+				85471F891BDF3EF0005AB4C8 /* hangman5.gif */,
+				85471F8A1BDF3EF0005AB4C8 /* hangman6.gif */,
+				85471F8B1BDF3EF0005AB4C8 /* hangman7.gif */,
+			);
+			path = "basic-hangman-img";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,11 +186,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85471F911BDF3EF0005AB4C8 /* hangman6.gif in Resources */,
 				3A2BBF6F1BCDDEBB00B23285 /* words.plist in Resources */,
 				3A2BBF641BCDDAC200B23285 /* LaunchScreen.storyboard in Resources */,
 				8567A7B91BD5D83300A44C2A /* maxresdefault.jpg in Resources */,
 				3A2BBF611BCDDAC200B23285 /* Assets.xcassets in Resources */,
+				85471F921BDF3EF0005AB4C8 /* hangman7.gif in Resources */,
 				3A2BBF5F1BCDDAC200B23285 /* Main.storyboard in Resources */,
+				85471F8E1BDF3EF0005AB4C8 /* hangman3.gif in Resources */,
+				85471F8D1BDF3EF0005AB4C8 /* hangman2.gif in Resources */,
+				85471F8C1BDF3EF0005AB4C8 /* hangman1.gif in Resources */,
+				85471F8F1BDF3EF0005AB4C8 /* hangman4.gif in Resources */,
+				85471F901BDF3EF0005AB4C8 /* hangman5.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
