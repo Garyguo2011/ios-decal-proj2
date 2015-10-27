@@ -13,6 +13,7 @@ class Hangman {
     var answer: String?
     var knownString: String?
     var guessedLetters: NSMutableArray?
+    var wrongLetters: NSMutableArray?
     
     init() {
         words = HangmanWords()
@@ -30,10 +31,12 @@ class Hangman {
             }
         }
         guessedLetters = NSMutableArray()
+        wrongLetters = NSMutableArray()
     }
     
     func guessLetter(letter: String) -> Bool {
         var result = false
+        print(guessedLetters)
         if guessedLetters!.containsObject(letter) {
             return true
         }
@@ -46,7 +49,9 @@ class Hangman {
                 knownString = "\((knownString! as NSString).substringToIndex(i))" + "\(letter)"
                             + "\((knownString! as NSString).substringFromIndex(i+1))"
             }
-            
+        }
+        if (!result && !wrongLetters!.containsObject(letter)){
+            wrongLetters!.addObject(letter)
         }
         return result
     }
@@ -61,5 +66,8 @@ class Hangman {
         }
         return result
     }
-
+    
+    func wrongTimes() -> Int {
+        return (wrongLetters?.count)!
+    }
 }

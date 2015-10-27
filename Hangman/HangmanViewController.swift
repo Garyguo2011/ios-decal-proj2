@@ -44,7 +44,13 @@ class HangmanViewController: UIViewController {
         guessTextField.text = guessTextField.text!.uppercaseString
         let firstChar = Array(arrayLiteral: guessTextField.text)[0]
         print(firstChar)
+        let wrong = hangman.wrongTimes()
         hangman.guessLetter(firstChar!)
+        if(hangman.wrongTimes() > wrong){
+            let imageName = "hangman" + String(wrong+2) + ".gif"
+            print(imageName)
+            hangmanImage.image = UIImage(named: imageName)
+        }
         self.view.endEditing(true)
         guessTextField.text = ""
         currentGuess.text = hangman.knownString
