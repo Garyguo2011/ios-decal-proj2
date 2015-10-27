@@ -71,7 +71,7 @@ class Hangman {
     }
     
     func win() -> Bool {
-        return knownString == guessedLetters
+        return knownString == answer
     }
     
     func lose() -> Bool {

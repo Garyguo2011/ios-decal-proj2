@@ -48,13 +48,12 @@ class HangmanViewController: UIViewController {
     @IBAction func makeAGuess(sender: UIButton) {
         guessTextField.text = guessTextField.text!.uppercaseString
         let firstChar = Array(arrayLiteral: guessTextField.text)[0]
-        print(firstChar)
-        
         if(hangman.win()){
-            alertWin()
+            return alertWin()
+
         }
         if(hangman.lose()){
-            alertLose()
+            return alertLose()
         }
         let wrong = hangman.wrongTimes()
         hangman.guessLetter(firstChar!)
@@ -71,10 +70,10 @@ class HangmanViewController: UIViewController {
         guessTextField.text = ""
         currentGuess.text = hangman.knownString
         if(hangman.win()){
-            alertWin()
+            return alertWin()
         }
         if(hangman.lose()){
-            alertLose()
+            return alertLose()
         }
     }
     
