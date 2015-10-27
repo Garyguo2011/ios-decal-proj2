@@ -36,7 +36,6 @@ class Hangman {
     
     func guessLetter(letter: String) -> Bool {
         var result = false
-        print(guessedLetters)
         if guessedLetters!.containsObject(letter) {
             return true
         }
@@ -50,7 +49,7 @@ class Hangman {
                             + "\((knownString! as NSString).substringFromIndex(i+1))"
             }
         }
-        if (!result && !wrongLetters!.containsObject(letter)){
+        if (!result && !wrongLetters!.containsObject(letter) && letter != ""){
             wrongLetters!.addObject(letter)
         }
         return result
@@ -69,5 +68,13 @@ class Hangman {
     
     func wrongTimes() -> Int {
         return (wrongLetters?.count)!
+    }
+    
+    func win() -> Bool {
+        return knownString == guessedLetters
+    }
+    
+    func lose() -> Bool {
+        return wrongTimes() > 5
     }
 }

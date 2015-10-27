@@ -15,6 +15,7 @@ class HangmanViewController: UIViewController {
     @IBOutlet weak var currentGuess: UILabel!
     @IBOutlet weak var hangmanImage: UIImageView!
     @IBOutlet weak var newGameButton: UIBarButtonItem!
+    @IBOutlet weak var tried: UILabel!
 
     var hangman = Hangman()
     
@@ -27,6 +28,7 @@ class HangmanViewController: UIViewController {
     func newGame(){
         hangman.start()
         currentGuess.text = hangman.knownString
+        tried.text = "Welcome to Hangman"
         print(hangman.answer)
     }
 
@@ -39,21 +41,61 @@ class HangmanViewController: UIViewController {
         newGame()
     }
 
+    @IBAction func clickStartOver(sender: UIButton) {
+        newGame()
+    }
     
     @IBAction func makeAGuess(sender: UIButton) {
         guessTextField.text = guessTextField.text!.uppercaseString
         let firstChar = Array(arrayLiteral: guessTextField.text)[0]
         print(firstChar)
+        
+        if(hangman.win()){
+            alertWin()
+        }
+        if(hangman.lose()){
+            alertLose()
+        }
         let wrong = hangman.wrongTimes()
         hangman.guessLetter(firstChar!)
         if(hangman.wrongTimes() > wrong){
             let imageName = "hangman" + String(wrong+2) + ".gif"
-            print(imageName)
             hangmanImage.image = UIImage(named: imageName)
+            var wrongTried = "";
+            for (var i = 0; i < hangman.wrongTimes(); i++){
+                wrongTried += " " + String(hangman.wrongLetters![i])
+            }
+            tried.text = "Tried: " + wrongTried
         }
         self.view.endEditing(true)
         guessTextField.text = ""
         currentGuess.text = hangman.knownString
+        if(hangman.win()){
+            alertWin()
+        }
+        if(hangman.lose()){
+            alertLose()
+        }
+    }
+    
+    func alertWin(){
+        if(hangman.win()){
+            let alertController = UIAlertController(title: "Winner", message:
+                "You are win!", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            presentViewController(alertController, animated: true, completion: nil)
+            return;
+        }
+    }
+    
+    func alertLose(){
+        if (hangman.lose()){
+            let alertController = UIAlertController(title: "Game Over", message:
+                "You are Lose!", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            presentViewController(alertController, animated: true, completion: nil)
+            return;
+        }
     }
 }
 

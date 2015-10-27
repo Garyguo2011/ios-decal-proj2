@@ -36,7 +36,7 @@
                                 <animations/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your guess here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zAe-Za-Rem">
-                                <rect key="frame" x="40" y="119" width="516" height="30"/>
+                                <rect key="frame" x="208" y="119" width="191" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -49,19 +49,39 @@
                                     <action selector="makeAGuess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h7d-8N-z3u"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tried:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H18-DR-746">
+                                <rect key="frame" x="281" y="90" width="44" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDs-Ef-AZa">
+                                <rect key="frame" x="347" y="85" width="71" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Start Over"/>
+                                <connections>
+                                    <action selector="clickStartOver:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lFM-Dt-3DB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="L1Z-Z2-JAy" firstAttribute="top" secondItem="2aU-V8-ThB" secondAttribute="bottom" constant="60" id="7B7-Nk-X92"/>
+                            <constraint firstItem="H18-DR-746" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ATD-wZ-xaE"/>
+                            <constraint firstItem="H18-DR-746" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="26" id="Bmt-R2-MNe"/>
                             <constraint firstItem="zAe-Za-Rem" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="159" id="CU0-6m-J5b"/>
                             <constraint firstItem="P1J-aa-abI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IFp-74-Cqa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zAe-Za-Rem" secondAttribute="trailing" constant="159" id="KyJ-Fi-Hav"/>
+                            <constraint firstItem="zAe-Za-Rem" firstAttribute="top" secondItem="YDs-Ef-AZa" secondAttribute="bottom" constant="4" id="MH4-ZF-xs0"/>
                             <constraint firstItem="2aU-V8-ThB" firstAttribute="top" secondItem="P1J-aa-abI" secondAttribute="bottom" constant="22" id="MMq-kX-vdD"/>
                             <constraint firstAttribute="leadingMargin" secondItem="L1Z-Z2-JAy" secondAttribute="leading" id="Q5H-Sr-Qj5"/>
+                            <constraint firstItem="zAe-Za-Rem" firstAttribute="top" secondItem="H18-DR-746" secondAttribute="bottom" constant="8" id="V07-Ig-c4O"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="L1Z-Z2-JAy" secondAttribute="bottom" constant="20" id="ahJ-UI-lPL"/>
                             <constraint firstItem="zAe-Za-Rem" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="55" id="b3B-U6-6Sw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="L1Z-Z2-JAy" secondAttribute="trailing" id="baF-vD-0jG"/>
+                            <constraint firstItem="YDs-Ef-AZa" firstAttribute="leading" secondItem="H18-DR-746" secondAttribute="trailing" constant="28" id="dpQ-1o-SaI"/>
                             <constraint firstItem="qL3-CI-TRb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gU4-hg-7Kg"/>
                             <constraint firstItem="P1J-aa-abI" firstAttribute="top" secondItem="qL3-CI-TRb" secondAttribute="bottom" constant="8" id="hKz-va-u54"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2aU-V8-ThB" secondAttribute="bottom" constant="312" id="hVC-Ri-u3e"/>
@@ -83,6 +103,7 @@
                         <outlet property="guessTextField" destination="zAe-Za-Rem" id="ifB-sC-t1q"/>
                         <outlet property="hangmanImage" destination="L1Z-Z2-JAy" id="4z0-na-WhJ"/>
                         <outlet property="newGameButton" destination="MoH-96-37h" id="BHN-bv-06U"/>
+                        <outlet property="tried" destination="H18-DR-746" id="FUc-oI-ocV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
